@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Nuvaira Foundation</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Nuvaira<span>Foundation</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="donate.html" class="btn">Donate</a>
+        <a href="contact.html">Contact</a>
+         <a href="career.html">Career</a>
+      <a href="events.html">Events</a>
+      <a href="volunteer.html">Volunteer</a>  
+      <a href="gallery.html">Gallery</a>  
+  
+      </nav>
+      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
+    </div>
+  </header>
+<!-- Create Project Modal -->
+<div id="createModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeCreateModal()">&times;</span>
+    <h2>Create Project</h2>
+    <form action="projects.php" method="POST" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="Project Title" required><br><br>
+      <textarea name="description" placeholder="Project Description" required></textarea><br><br>
+      <input type="file" name="image"><br><br>
+      <button type="submit" name="create">Add Project</button>
+    </form>
+  </div>
+</div>
+
+<!-- Edit Project Modal -->
+<div id="editModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeEditModal()">&times;</span>
+    <h2>Edit Project</h2>
+    <form action="projects.php" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="id" id="edit_id">
+      <input type="text" name="title" id="edit_title" placeholder="Project Title" required><br><br>
+      <textarea name="description" id="edit_description" placeholder="Project Description" required></textarea><br><br>
+      <input type="file" name="image"><br><br>
+      <button type="submit" name="edit">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<style>
+.modal { 
+  position: fixed; top:0; left:0; width:100%; height:100%; 
+  background: rgba(0,0,0,0.5); display: flex; justify-content:center; align-items:center; 
+  z-index: 1000;
+}
+.modal-content { background: #fff; padding: 20px; width: 400px; position: relative; border-radius:8px;}
+.modal-content .close { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;}
+</style>
+
+  <main class="container" data-aos="fade-up">
+    <h1>Our Projects</h1>
+    <div class="grid three">
+      <!-- Repeat project cards; add more as needed -->
+      <article class="project card" data-aos="fade-up">
+        <img src="images\project1.jpeg" alt="Clean Water">
+        <h3>Clean Water Initiative</h3>
+        <p>Installing water filters and running hygiene workshops in villages.</p>
+        <div class="project-actions">
+    <button class="edit-btn">Edit</button>
+    <button class="delete-btn">Delete</button>
+</div>
+
+      </article>
+
+      <article class="project card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images\project2.jpeg" alt="Education">
+        <h3>Community Classrooms</h3>
+        <p>Learning centers for out-of-school children with trained volunteers.</p>
+        <div class="project-actions">
+    <button class="edit-btn">Edit</button>
+    <button class="delete-btn">Delete</button>
+</div>
+
+      </article>
+
+      <article class="project card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/project3.jpeg" alt="Green Villages">
+        <h3>Green Villages</h3>
+        <p>Afforestation drives and sustainable agriculture training for small farmers.</p>
+        <div class="project-actions">
+    <button class="edit-btn">Edit</button>
+    <button class="delete-btn">Delete</button>
+</div>
+
+      </article>
+      <button id="addProjectBtn" class="create-btn">Create New Project</button>
+
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container center small">&copy; <span id="year3"></span> Nuvaira Foundation</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script> AOS.init(); </script>
+  <!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+<script>
+// Open Create Modal
+document.getElementById("addProjectBtn").addEventListener("click", function() {
+    document.getElementById("createModal").style.display = "flex";
+});
+
+// Open Edit Modal and prefill data
+document.querySelectorAll(".edit-btn").forEach((btn, index) => {
+    btn.addEventListener("click", function() {
+        const projectCard = btn.closest(".project.card");
+        const title = projectCard.querySelector("h3").textContent;
+        const desc = projectCard.querySelector("p").textContent;
+
+        document.getElementById("edit_id").value = index+1; // later replace with real ID from PHP
+        document.getElementById("edit_title").value = title;
+        document.getElementById("edit_description").value = desc;
+
+        document.getElementById("editModal").style.display = "flex";
+    });
+});
+
+// Close modals
+function closeCreateModal() { document.getElementById("createModal").style.display = "none"; }
+function closeEditModal() { document.getElementById("editModal").style.display = "none"; }
+
+// Close modal if clicked outside
+window.onclick = function(e) {
+    if(e.target == document.getElementById("createModal")) closeCreateModal();
+    if(e.target == document.getElementById("editModal")) closeEditModal();
+}
+
+document.querySelectorAll(".delete-btn").forEach(btn => {
+    btn.addEventListener("click", function() {
+        if (confirm("Are you sure you want to delete this project?")) {
+            alert("Project deleted.");
+        }
+    });
+});
+</script>
+
+
+</body>
+</html>

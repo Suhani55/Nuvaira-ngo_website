@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuvaira Chatbot Assistant</title>   
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+<!-- Floating Chat Toggle Button -->
+<div id="chat-toggle" title="Open chat">💬</div>
+
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-container" aria-live="polite">
+  <div class="chat-header">
+    🌱 Nuvaira Bot
+    <div>
+      <button id="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+      <button id="chat-close">✖</button>
+    </div>
+  </div>
+
+  <div id="chat-box" class="chatbox" role="log"></div>
+
+  <div id="chat-input-area">
+    <button id="mic-btn" title="Voice Input">🎤</button>
+    <input id="chat-input" type="text" placeholder="Ask me anything..." aria-label="Chat input">
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+
+<script src="chatbot.js"></script>
+</body>
+</html>

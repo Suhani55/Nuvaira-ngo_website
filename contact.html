@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Nuvaira Foundation</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Nuvaira Foundation Logo">
+      <h1>Nuvaira Foundation</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html" class="active">Contact</a>
+       <a href="career.html">Career</a>
+      <a href="events.html">Events</a>
+      <a href="volunteer.html">Volunteer</a> 
+      <a href="gallery.html">Gallery</a>   
+  
+    </nav>
+  </header>
+
+  <!-- Contact Hero Section -->
+  <section class="contact-hero" data-aos="fade-in">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you — together, we can make a difference!</p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section" data-aos="fade-up">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>Address:</strong> 45 Green Valley Road, Kanpur, India</p>
+        <p><strong>Email:</strong> contact@nuvaira.org</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p>Follow us on:</p>
+        <div class="social-links">
+          <a href="#"><img src="images/facebook.jpg" alt="Facebook"></a>
+          <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form action="contact.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nuvaira Foundation | A Breath of Hope</p>
+  </footer>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+
+</body>
+</html>

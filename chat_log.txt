@@ -1,0 +1,3 @@
+[2025-11-15 14:39:51] USER: hiiii
+ERROR: Error connecting to LM Studio: Operation timed out after 60009 milliseconds with 0 bytes received
+

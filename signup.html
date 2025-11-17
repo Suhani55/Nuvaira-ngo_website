@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuvaira Foundation | Volunteer Signup</title>
+
+  <style>
+    /* ---------- Reset ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ---------- Background ---------- */
+    body {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url('images/logo.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ---------- Container ---------- */
+    .signup-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      width: 400px;
+      text-align: center;
+    }
+
+    /* ---------- Branding ---------- */
+    .logo {
+      color: #2e8b57;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    /* ---------- Headings ---------- */
+    h2 {
+      color: #2e2e2e;
+      margin-bottom: 15px;
+    }
+
+    p.subtitle {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    /* ---------- Form Fields ---------- */
+    .input-group {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .input-group input, .input-group select, .input-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+      border-color: #2e8b57;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    /* ---------- Button ---------- */
+    .btn {
+      background-color: #2e8b57;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #256b45;
+    }
+
+    /* ---------- Login Link ---------- */
+    .login-text {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-text a {
+      color: #2e8b57;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 480px) {
+      .signup-container {
+        width: 90%;
+        padding: 30px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="signup-container">
+    <h1 class="logo">🌱 Nuvaira Foundation</h1>
+    <p class="tagline">“Renewing Lives, Restoring Earth.”</p>
+
+    <h2>Volunteer Signup</h2>
+    <p class="subtitle">Join us in spreading hope and sustainability.</p>
+
+    <form action="signup.php" method="post">
+
+      <div class="input-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" required>
+      </div>
+
+      <div class="input-group">
+        <label for="interest">Area of Interest</label>
+        <select id="interest" name="interest" required>
+          <option value="">Select...</option>
+          <option value="environment">Environmental Projects</option>
+          <option value="education">Child Education</option>
+          <option value="healthcare">Health & Wellness</option>
+          <option value="awareness">Awareness Campaigns</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="message">Why do you want to volunteer?</label>
+        <textarea id="message" name="message" placeholder="Share your motivation..."></textarea>
+      </div>
+      <div class="input-group">
+        <label for="password">Create Password</label>
+      <input type="password" name="password" placeholder="Password" required><br>
+</div>
+      <button type="submit" class="btn">Join Nuvaira</button>
+
+      <p class="login-text">Already a member? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+  <!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+
+</body>
+</html>

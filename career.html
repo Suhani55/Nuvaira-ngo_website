@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Our Mission | Nuvaira Foundation</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #111;
+    }
+
+    header {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .content h2 {
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      line-height: 1.8;
+      color: #222;
+    }
+
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .role-card {
+      background: #f5fff7;
+      padding: 25px;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .role-card h3 {
+      color: #2e8b57;
+      margin-bottom: 10px;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      background-color: #2e8b57;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .apply-btn:hover {
+      background-color: #256b45;
+    }
+
+    footer {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Join Our Mission 💚</h1>
+  <p>Become a part of Nuvaira Foundation’s movement to restore hope and balance to our planet.</p>
+</header>
+
+<section class="content">
+  <h2>Work With Purpose</h2>
+  <p>We offer opportunities for individuals who want to contribute their time, skills, and passion to make real social impact. Whether you’re a student, professional, or environmental enthusiast — there’s a place for you at Nuvaira.</p>
+
+  <div class="roles">
+    <div class="role-card">
+      <h3>Environmental Intern</h3>
+      <p>Assist in research, awareness campaigns, and sustainability projects with our team.</p>
+      <a href="contact.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="role-card">
+      <h3>Outreach Coordinator</h3>
+      <p>Lead community programs, plan events, and engage with schools and local groups.</p>
+      <a href="contact.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="role-card">
+      <h3>Digital Volunteer</h3>
+      <p>Help us grow online — manage social media, content writing, and creative campaigns.</p>
+      <a href="contact.html" class="apply-btn">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Nuvaira Foundation | A Breath of Hope 🌱</p>
+</footer>
+<!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+
+</body>
+</html>

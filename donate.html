@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Donate — Nuvaira Foundation</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+
+    body { background: #f9f9f9; color: #333; line-height: 1.6; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    .site-header { background: #4CAF50; color: #fff; padding: 15px 0; }
+    .site-header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px; }
+    .site-header .logo { font-size: 1.5em; font-weight: bold; }
+    .site-header .logo span { font-weight: normal; color: #e0f2f1; }
+    .site-header .nav a { margin-left: 20px; color: #fff; font-weight: 500; }
+    .site-header .btn { background: #fff; color: #4CAF50; padding: 8px 15px; border-radius: 5px; font-weight: 600; }
+
+    /* Main Content */
+    main { padding: 60px 20px; display: flex; justify-content: center; }
+    .donate-box { background: #fff; padding: 40px 30px; border-radius: 10px; max-width: 500px; width: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .donate-box h1 { text-align: center; margin-bottom: 20px; color: #4CAF50; }
+    .donate-box h3 { color: #333; margin: 20px 0 10px; }
+    .donate-box p { margin-bottom: 15px; }
+
+    /* UPI QR */
+    .donate-box img { display: block; margin: 15px auto; max-width: 240px; border: 2px solid #4CAF50; padding: 5px; border-radius: 10px; }
+
+    /* Form */
+    .donate-form label { display: block; margin: 10px 0 5px; font-weight: 600; }
+    .donate-form input { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 15px; }
+    .donate-form button { width: 100%; background: #4CAF50; color: #fff; padding: 12px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; }
+    .donate-form button:hover { background: #45a049; }
+
+    hr { border: 0; border-top: 1px solid #eee; margin: 25px 0; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .site-header .container { flex-direction: column; text-align: center; }
+      .site-header .nav a { display: block; margin: 10px 0; }
+      main { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Nuvaira<span>Foundation</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="donate.html" class="btn">Donate</a>
+        <a href="contact.html">Contact</a>
+         <a href="career.html">Career</a>
+      <a href="events.html">Events</a>
+      <a href="volunteer.html">Volunteer</a> 
+      <a href="gallery.html">Gallery</a>   
+  
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="donate-box">
+      <h1>Support Nuvaira</h1>
+      <p>Your contribution helps us run programs that directly impact lives.</p>
+
+      <!-- Quick UPI Donation -->
+      <h3>Quick Donate (UPI)</h3>
+      <p>Scan the QR or use UPI ID: <strong>nuvaira@upi</strong></p>
+      <img src="images/qr.jpg" alt="UPI QR">
+
+      <hr>
+
+      <!-- Online Payment Form -->
+      <h3>Online Payment (Card / Netbanking)</h3>
+      <p>We recommend integrating Razorpay / PayPal for secure payments. Below is a basic donation form that posts to <code>donate.php</code>.</p>
+      <form action="donate.php" method="POST" class="donate-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="amount">Donation Amount (INR)</label>
+        <input type="number" id="amount" name="amount" min="100" placeholder="₹100" required>
+
+        <button type="submit">Donate Now</button>
+      </form>
+    </div>
+  </main>
+  <!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+
+</body>   
+</html>                                                                                                                                                        

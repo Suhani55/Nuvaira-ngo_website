@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About — Nuvaira Foundation</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+<!-- header (reuse pattern) -->
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="logo">Nuvaira<span>Foundation</span></a>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="donate.html" class="btn">Donate</a>
+<a href="contact.html">Contact</a>
+ <a href="career.html">Career</a>
+      <a href="events.html">Events</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="gallery.html">Gallery</a>    
+  
+</nav>
+<button class="nav-toggle" aria-label="toggle navigation">☰</button>
+</div>
+</header>
+
+
+<main class="container" data-aos="fade-up">
+
+<h1>About Nuvaira Foundation</h1>
+<p>Nuvaira Foundation was started to provide meaningful, sustainable support for underserved communities. Our core pillars are: <strong>Health</strong>, <strong>Education</strong> and <strong>Environment</strong>.</p>
+
+
+<section class="grid three">
+<div class="card">
+<h3>Our Mission</h3>
+<p>To create long-term, community-led solutions that restore dignity and improve quality of life.</p>
+</div>
+<div class="card">
+<h3>Our Vision</h3>
+<p>A healthier, educated, and greener world where every community breathes easy.</p>
+</div>
+<div class="card">
+<h3>How We Work</h3>
+<p>Partnering with local leaders, training volunteers, and measuring impact transparently.</p>
+</div>
+</section>
+
+
+<section>
+<h2>Team & Partners</h2>
+<p>Our team is a mix of community organizers, educators, and environmental specialists. We partner with local NGOs and volunteers to scale impact.</p>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<div class="container center small">&copy; <span id="year2"></span> Nuvaira Foundation</div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+<script> AOS.init(); </script>
+<!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>

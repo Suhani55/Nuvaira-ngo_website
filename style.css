@@ -1,0 +1,1060 @@
+/* ===============================
+   GLOBAL STYLES — Nuvaira Foundation
+   =============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #960404;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.username {
+    font-weight: 600;
+    color: #fff;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.logout {
+    background: red;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar {
+    width: 100%;
+    background: #009688;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* LEFT – Logo */
+.nav-left a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* CENTER – Menu */
+.nav-center {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-center a {
+    background: #8e44ad;
+    padding: 8px 18px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* RIGHT – Login/Profile Icon */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+#userIcon {
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+}
+
+.logo {
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.logo .highlight-text {
+  font-size: 28px;         /* makes the text big */
+  font-weight: bold;       /* makes it bold */
+  color: #0c3c26;          /* dark green color */
+  background-color: #d4f7d0; /* light green highlight */
+  padding: 5px 10px;       /* space around text */
+  border-radius: 6px;      /* smooth corners */
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  color: #00b894;
+  font-weight: 700;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #00b894;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('/images/hero-bg.jpg.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #f1f1f1;
+}
+
+.btn {
+  background: #7c1594;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #019875;
+}
+
+/* ===============================
+   SECTION HEADERS
+   =============================== */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00b894;
+}
+
+section p {
+  text-align: center;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+
+/* ===============================
+   ABOUT SECTION
+   =============================== */
+.about {
+  background: #fff;
+  padding: 80px 5%;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ===============================
+   PROJECTS SECTION
+   =============================== */
+.projects {
+  background: #f8fdfb;
+  padding: 80px 5%;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  color: #00b894;
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0 15px 20px;
+}
+
+/* ===============================
+   IMPACT COUNTERS
+   =============================== */
+.impact {
+  background: #00b894;
+  color: #fff;
+  padding: 70px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.counter h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.counter p {
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   DONATE SECTION
+   =============================== */
+.donate-section {
+  background: #fff;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.donate-section p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.donate-btn {
+  background: #ff9800;
+  color: #fff;
+  padding: 12px 35px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+.donate-btn:hover {
+  background: #e68a00;
+}
+
+/* ===============================
+   CONTACT SECTION
+   =============================== */
+.contact-hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('../images/contact-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact-section {
+  background: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: auto;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  color: #333;
+}
+
+.contact-info h3 {
+  color: #00b894;
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  flex: 1 1 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+  width: 100%;
+  background: #00b894;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-form button:hover {
+  background: #019875;
+}
+
+.social-links img {
+  width: 32px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #00b894;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ===============================
+   SCROLL & FADE ANIMATIONS
+   =============================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .impact {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn, .donate-btn {
+    padding: 10px 20px;
+  }
+}
+/* =========================================
+   Nuvaira Foundation — Global Style (style.css)
+   Elegant | Responsive | NGO Theme
+========================================= */
+
+/* --- Global Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* --- Header / Navbar --- */
+header {
+  background: linear-gradient(90deg, #007b83, #00b4a2);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffe082;
+  transform: scale(1.05);
+}
+
+/* --- Hero Section --- */
+.hero {
+  background: url("images/hero-bg.jpg") center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+  background-color: #ffb703;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #ff8c00;
+  transform: scale(1.05);
+}
+
+/* --- Section Common --- */
+section {
+  padding: 80px 10%;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #00b4a2;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* --- About Section --- */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Donation Form --- */
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #00b4a2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 180, 162, 0.3);
+}
+
+form button {
+  background-color: #00b4a2;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: #007b83;
+  transform: scale(1.05);
+}
+
+/* --- Gallery --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Footer --- */
+footer {
+  background: #007b83;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 60px;
+}
+
+footer p {
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #ffb703;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+}
+/* =========================
+   Project Section Styling
+========================= */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.project {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+  width: 50%;
+  height: 500px;         /* ✅ uniform height */
+  object-fit: cover;     /* ✅ crops image neatly without distortion */
+  border-bottom: 3px solid #00b4a2;
+}
+
+.project h3 {
+  font-size: 1.3rem;
+  color: #007b83;
+  margin: 15px 0 8px;
+  font-weight: 600;
+}
+
+.project p {
+  font-size: 1rem;
+  padding: 0 15px 25px;
+  color: #444;
+  line-height: 1.5;
+}
+.project-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.create-btn, .edit-btn, .delete-btn {
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.create-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project img {
+    height: 180px;
+  }
+}
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body and general settings */
+body {
+  background-color: #f9f9f9;     /* Light background for readability */
+  color: #000;                   /* Black text */
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Header section */
+header {
+  background-color: #fff;
+  color: #000;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Navigation bar */
+nav {
+  
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 20px;
+  transition: 0.3s;
+  background-color:#7c1594;
+  border-radius: 25px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Main content */
+main {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Section headings */
+h2 {
+  color: #775d67;
+  border-left: 5px solid #2c3e50;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* Gallery section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Volunteer cards */
+.volunteer-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.volunteer-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-5px);
+}
+
+.volunteer-card h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Career section */
+.career-list {
+  list-style-type: none;
+}
+
+.career-list li {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.career-list li:hover {
+  background: #f0f0f0;
+}
+
+/* Events section */
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+/* Ensure all text is visible and readable */
+body, p, h1, h2, h3, h4, h5, h6, span {
+  color: #110e0e !important; /* Force black text */
+}
+
+/* Gallery page specific fix */
+.gallery-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #000;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.gallery-section p {
+  color: #222;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Optional: Add background contrast if needed */
+main, section {
+  background-color: #fafafa;
+}
+
+/* Just in case text overlaps with hero sections or gradients */
+section, div, article {
+  color: #0e0d0d;
+}
+/* ========== EVENT SECTION IMAGES ========== */
+.event-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 260px; /* smaller width */
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card img {
+  width: 100%;
+  height: 500px; /* reduced height */
+  object-fit: cover;
+  border-bottom: 3px solid #00897b;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== GALLERY SECTION IMAGES ========== */
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery-images img {
+  width: 200px; /* reduced from 30% to fixed small size */
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | Nuvaira Foundation</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f9fff9;
+      color: #111;
+    }
+
+    header {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2e8b57;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #222;
+      margin-bottom: 30px;
+    }
+
+    .join-btn {
+      background-color: #2e8b57;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .join-btn:hover {
+      background-color: #256b45;
+    }
+
+    footer {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Be a Change-Maker 🌱</h1>
+  <p>Join the Nuvaira Foundation and bring new hope to people and the planet.</p>
+</header>
+
+<section class="container">
+  <h2>Why Volunteer With Us?</h2>
+  <p>At Nuvaira Foundation, we believe that small actions lead to big transformations. By volunteering, you’ll help in projects like clean water initiatives, tree plantation drives, and community education programs.</p>
+
+  <h2>Volunteer Opportunities</h2>
+  <p>We’re looking for passionate individuals to assist in our campaigns, digital awareness programs, field projects, and environmental education workshops.</p>
+
+  <a href="signup.html" class="join-btn">Join as Volunteer</a>
+</section>
+
+<footer>
+  <p>© 2025 Nuvaira Foundation | A Breath of Hope 💚</p>
+</footer>
+<!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+
+</body>
+</html>

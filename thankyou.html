@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Nuvaira Foundation</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #d4fc79, #96e6a1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .thankyou-box {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 450px;
+    }
+    .thankyou-box h1 {
+      color: #2e8b57;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+    .thankyou-box p {
+      color: #333;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    .thankyou-box a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2e8b57;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .thankyou-box a:hover {
+      background: #256b45;
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-box">
+    <h1>🌱 Thank You for Joining!</h1>
+    <p>Your registration as a volunteer with <b>Nuvaira Foundation</b> has been received.<br>
+    Together, we’ll bring a breath of hope to lives and the planet. 💚</p>
+    <a href="index.html">Back to Home</a>
+  </div>
+  <!-- Floating Chatbot -->
+<div id="chatbot-icon" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    <img src="images/chatbot.png" alt="Chatbot" width="60" height="60">
+</div>
+
+<iframe id="chatbot-frame" src="chatbot-float.html" 
+        style="position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; display: none; border: none; z-index: 9999; box-shadow: 0 0 15px rgba(0,0,0,0.3); border-radius: 10px;">
+</iframe>
+
+<script>
+    const icon = document.getElementById('chatbot-icon');
+    const iframe = document.getElementById('chatbot-frame');
+
+    icon.addEventListener('click', () => {
+        iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>
